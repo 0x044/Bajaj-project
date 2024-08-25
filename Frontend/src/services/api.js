@@ -1,13 +1,13 @@
-import axios from 'axios';
+import axios from "axios";
 
-const API_URL = 'http://localhost:3000/bfhl'; // Replace with your actual backend URL
+const API_URL = "https://bfhl-backend.onrender.com/bfhl";
 
 export const processBfhlData = async (data) => {
   try {
     const response = await axios.post(API_URL, data);
     return response.data;
   } catch (error) {
-    console.error('Error processing BFHL data:', error);
+    console.error("Error processing BFHL data:", error);
     throw error;
   }
 };
